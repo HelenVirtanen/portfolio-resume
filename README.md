@@ -8,4 +8,4 @@ I created it using magic of:
 All the main sections are builded quite close to a real website.
 
 Hope you will like it :)
-Your suggestions and feedback are welcome 
+Your suggestions and feedback are welcome!
