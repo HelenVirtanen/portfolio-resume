@@ -1,5 +1,5 @@
 This is a frontend project - Mogo.
-I made it using magic of:
+I created it using magic of:
 - HTML5
 - CSS3
 - responsive design
