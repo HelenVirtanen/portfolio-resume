@@ -1,0 +1,47 @@
+// main: style.less
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.wrap_img {
+    display: block;
+    max-width: 100%;
+    background-color: #b4a090;
+    //overflow: hidden;
+
+     &--370_300 {
+        width: 370px;
+        height: 300px;
+
+        @media @mobile {
+            width: 100%;
+        }
+    }
+
+    &--750_650 {
+        width: 750px;
+        //height: 650px;
+
+        @media @mobile {
+            width: 100%;
+        }
+    } 
+
+    
+
+}
