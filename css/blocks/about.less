@@ -1,0 +1,171 @@
+// main: ../style.less
+
+.about {
+    margin: 8.4rem 0;
+
+    @media @tablet {
+        margin-top: 3rem; 
+        margin-bottom: 6rem;
+    }
+
+}
+
+.about__inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
+
+.about__photo,
+.about__content {
+    width: 50%;
+
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+.about__content {
+    margin-top: 2rem;
+
+    @media @tablet {
+        order: 1;
+
+        & .about__btn {
+            display: flex;
+            justify-content: center;
+            padding-right: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        & .about__btn > a {
+            margin-left: 1.7rem;
+        }
+    }
+}
+
+.about__photo {
+    position: relative;
+    margin-left: 0;
+
+    img {
+        position: relative;
+        z-index: 2;
+        bottom: -6.2rem;
+    }
+
+    &::before {
+        content: "";
+        width: 435px;
+        height: 335px;
+        background-color: fade(#03adba, 25%);
+        position: absolute;
+        bottom: 7rem;
+        z-index: 1;
+
+    }
+
+    @media @notebook {
+        &::before {
+        width: 410x;
+        height: 352px;
+        bottom: 6.65rem;
+    }
+        img {
+            bottom: -3.7rem;
+        }
+    }
+
+    @media @tablet {
+        order: 2;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        &::before {
+            position: absolute;
+            width: 320px;
+            height: 210px;
+            bottom: 0;
+        }
+
+        img {
+            position: relative;
+            max-width: 35%;
+            bottom: 0;
+        }
+    }
+
+    @media @mobile {
+        padding: 0;
+        &::before {
+        width: 91%;
+        height: 133px;
+        }
+    }
+
+    @media @mini {
+        &::before {
+        width: 100%;
+        height: 100px;
+        }
+    }
+
+}
+
+.about__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+
+    @media @notebook {
+        font-size: 2.5rem;
+    }
+
+    @media @tablet {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
+
+.about__bigtitle {
+    margin-bottom: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    left: -10px;
+    font-size: 6.1rem;
+    background: linear-gradient(180deg, fade(#03adba, 30%), fade(#570c91, 30%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    @media @notebook {
+        font-size: 4rem;
+    }
+
+    @media @tablet {
+        font-size: 3rem;
+        text-align: center;
+        padding-left: 1rem;
+    }
+}
+
+.about__text {
+    margin-bottom: 2.8rem;
+    font-size: 1rem;
+    line-height: 2;
+    color: @gray;
+    font-weight: 300px;
+    text-align: justify;
+
+    @media @tablet {
+        padding: 0 1.5rem;
+    }
+
+    @media @mini {
+        padding: 0;
+    }
+}

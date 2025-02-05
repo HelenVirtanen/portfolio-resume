@@ -1,0 +1,44 @@
+// main: ../style.less
+
+.contact {
+    display: flex;
+}
+
+.contact__left {
+    width: 47%;
+    padding: 2rem;
+
+}
+
+.contact__right {
+    width: 53%;
+    background: #cca68d url("../images/forest.jpg") right center no-repeat;
+    background-position: 62% 50%;
+    background-size: 100%;
+}
+
+.contact__info {
+    margin: 2rem 0 2.5rem;
+    padding-left: .2rem ;
+    list-style: none;
+    color: @black;
+    font-weight: 300;
+    font-size: .94rem;
+
+    & i {
+        color: #570c91;
+        margin-right: 0.8rem;
+    }
+
+    
+}
+
+.contact__info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: .8rem;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

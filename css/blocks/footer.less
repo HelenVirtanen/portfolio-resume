@@ -1,0 +1,131 @@
+// main: ../style.less
+
+.footer {
+    padding: 1rem 0;
+    background-color: #03adba;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.footer__credits {
+    display: flex;
+    align-items: center;
+
+    @media @tablet {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    @media @mini-sm {
+        flex-direction: column;
+    }
+}
+
+.footer__copyright {
+    font-size: .94rem;
+    border-right: 1px solid @black;
+    padding-right: .8rem;
+    margin-right: 1rem;
+
+    @media @mobile {
+        text-align: center;
+        border-right: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+
+    @media @mobile {
+        margin-top: .6rem;
+    }
+
+    @media @mini-sm {
+        margin-top: .5rem;
+    }
+}
+
+.footer__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: .8rem;
+    color: #570c91;
+
+    @media @tablet {
+        margin: 0 .4rem;
+    }
+
+    @media @mini-sm {
+        margin: 0 .3rem;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+
+    @media @tablet {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    @media @mobile {
+        font-size: .94rem;
+    }
+
+    @media @mini-sm {
+        font-size: .88rem;
+    }
+    
+}
+
+.footer__nav-link {
+    text-decoration: none;
+    color: @black;
+    margin-left: 1.7rem;
+    transition: text-decoration .2s linear, color .2s linear;
+
+    &:hover {
+        text-decoration: underline;
+        color: #570c91;
+    }
+
+    &--btn {
+        border: 1px solid #45b1c7;
+        border-radius: 20px;
+        padding: .7rem 1.6rem;
+        background-color: #0787a3;
+        color: @white;
+        transition: background-color .2s linear, color .2s linear, border .2s linear, transform .2s ease;
+
+        &:hover {
+            background-color: #570c91;
+            border-color: #570c91;
+            color: #fff;
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+
+        @media @tablet {
+            border-radius: 40px;
+            padding: .5rem 1.1rem;
+        }
+    }
+
+    @media @tablet {
+        text-align: center;
+        margin: 0 1rem .7rem;
+    }
+
+}

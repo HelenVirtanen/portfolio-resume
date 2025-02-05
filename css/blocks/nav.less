@@ -1,0 +1,75 @@
+// main: ../style.less
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+
+    @media @mobile {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+
+
+        &.show {
+            display: flex;
+
+        }
+    }
+}
+
+.nav__link {
+    font-size: 0.93rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 2rem;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #cca68d;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+        transition: width .2s linear;
+    }
+
+    &:hover:not(.nav__link--btn) {       
+        &:after {
+            width: 100%;
+        }
+    }
+
+    &--btn {
+        padding: 0.66rem 2.3rem;
+        border: 3px solid #cca68d;
+        border-radius: 20px;
+        transition: background-color .2s linear, color .2s linear, border .2s linear, transform .2s ease;
+
+        &:hover {
+            background-color: #0787a3;
+            border-color: #45b1c7;
+            color: #fff;
+            transform: scale(1.05);
+        }
+    }
+
+    @media @mobile {
+        width: 100%;
+        margin-left: 0;
+        padding: .5rem 1rem;
+    }
+}

@@ -1,0 +1,54 @@
+// main: ../style.less
+
+.social {
+    display: flex;
+    margin-bottom: 42px;
+
+    @media @mini {
+        margin-bottom: 24px;
+    }
+}
+
+.social__link {
+    margin-right: 12px;
+    text-decoration: none;
+    transition: transform .2s linear;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    @media @tablet {
+        margin-right: 10px;
+    }
+
+    @media @mobile {
+        margin-right: 9px;
+    }
+
+    @media @mini {
+        margin-right: 7px;
+    }
+}
+
+.social__link i {
+    font-size: 42px;
+    color:#03adba;
+    text-align: center;
+
+    &:hover {
+        color: #570c91;
+    }
+
+    @media @tablet {
+        font-size: 32px;
+    }
+
+    @media @mobile {
+        font-size: 28px;
+    }
+
+    @media @mini {
+        font-size: 25px;
+    }
+}
