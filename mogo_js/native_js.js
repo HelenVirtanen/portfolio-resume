@@ -20,6 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
         checkScroll(scrollOffset);
     });
 
+/* Scroll lower than fixed header */
+document.querySelectorAll('a[href^="#"]').forEach((anchor, index) => {
+anchor.addEventListener('click', function (event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    const headerHeight = header.offsetHeight;
+
+    let additionalOffset = 0;
+
+    if (index === 0) {
+        additionalOffset = headerHeight;
+    };
+
+    window.scrollTo({
+        top: targetElement.offsetTop - headerHeight + additionalOffset
+    });
+    });
+});
+    
   /* Nav menu toggle */
     document.addEventListener("click", (event) => {
         const target = event.target.closest("#nav_toggle");
