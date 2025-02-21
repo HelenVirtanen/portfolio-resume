@@ -36,16 +36,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 77px;
-    height: 77px;
+    width: 55px;
+    height: 57px;
     background-color: #03adba;
     color: @white;
     font-size: 1rem;
     position: absolute;
     text-align: center;
     line-height: 1.4;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 1;
 }
 
@@ -55,7 +55,15 @@
     display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 35px;
+    border-radius: 10px;
+    opacity: 0.7;
+    transition: opacity .2s linear;
+}
+
+.articles__item:hover {
+    & .articles__photo {
+        opacity: 1;
+    }
 }
 
 .articles__title {
