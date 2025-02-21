@@ -132,5 +132,4 @@ $(function() {
         nav.toggleClass("show");
         console.log("clicked");
     });
-
 });
