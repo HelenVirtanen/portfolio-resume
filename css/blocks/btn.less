@@ -1,0 +1,85 @@
+// main: ../style.less
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 170px;
+    text-align: center;
+    font-size: 1.06rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #cca68d;
+    border-radius: 1.8em;
+    background: none;
+    font-family: inherit;
+    line-height: 1.1;
+    padding: 1.05em 1.7em;
+    color: #a36656;
+    cursor: pointer;
+    transition: background-color .2s linear, color .2s linear, box-shadow .1s linear, border-color .2s linear;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: #cca68d;
+        color: #fff;
+        box-shadow: 2px 2px 10px fade(@black, 24%);
+        border-color: #cca68d;
+    }
+
+    + .btn {
+        margin-left: 1rem;
+
+        @media @mini {
+            margin-left: .4rem;
+        }
+    }
+
+
+    /* Modificators */
+    &--sm {
+        padding: 0.7em 1.1em;
+        min-width: 0;
+        font-size: .94rem;
+        font-weight: 700;
+        border-width: 2px;
+    }
+
+    &--thin {
+        min-width: 145px;
+        font-size: 1rem;
+        margin-right: 2.8rem;
+    }
+
+    &--violet {
+        min-width: 0;
+        padding: .95em 2.4em;
+        border-color: fade(#570c91, 50%);
+        border-radius: 1.5em;
+        color: #570c91;
+
+        &:hover {
+            background-color: fade(#570c91, 90%);
+        }
+    }
+
+    @media @tablet {
+        font-size: 1rem;
+        padding: 1em 1.5em;
+        min-width: 130px;
+    }
+
+    @media @mobile {
+        font-size: .8rem;
+        padding: .8em 1.3em;
+        min-width: 120px;
+    }
+
+    @media @mini {
+        font-size: .75rem;
+        padding: .8em 1em;
+        min-width: 65px;
+    }
+}

@@ -1,0 +1,114 @@
+// main: ../style.less
+
+.intro__inner {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #cdb597;
+    padding-top: 6.6rem;
+    padding-bottom: 8rem;
+    /* background: url(../images/evirtanen.png) right top no-repeat; */
+
+    @media @tablet {
+        padding: 3rem 0;
+        background-size: 400px auto; 
+    }
+
+    @media @mobile {
+        margin-top: 80px;
+        padding: 3rem .3rem 2rem;
+        background-size: 300px auto; 
+    }
+}
+
+.intro__content {
+    width: 50%;
+
+    @media @mobile {
+    width: 55%;
+    } 
+
+    @media @mini {
+        width: 100%;
+        } 
+}
+
+.intro__photo {
+    width: 50%;
+    position: relative;
+
+    @media @mini {
+        width: 45%;
+        } 
+
+    @media @mini-sm {
+        display: none;
+        } 
+}
+
+.intro__photo__img {
+    position: absolute;
+    bottom: -15rem;
+    right: 0;
+    z-index: 1;
+
+    @media @tablet {
+        max-width: 320px;
+        bottom: -11rem;
+    }
+
+    @media @mobile {
+        max-width: 230px;
+        bottom: -4rem;
+    }
+
+    @media @mini {
+        max-width: 185px;
+        bottom: -6rem;
+        right: -2rem;
+    }
+
+    @media @mini-sm {
+        display: none;
+    }
+}
+
+.intro__suptitle {
+    font-size: 2.13rem;
+    color: @black;
+    font-weight: 200;
+
+    @media @tablet {
+        font-size: 1.5rem;
+    }
+
+    @media @mini {
+        font-size: 1rem;
+    }
+}
+
+.intro__title {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+
+    @media @tablet {
+        font-size: 2rem;
+    }
+
+    @media @mini {
+        font-size: 1.5rem;
+    }
+}
+
+.intro__text {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: fade(@black, 70%);
+
+    @media @mini {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}

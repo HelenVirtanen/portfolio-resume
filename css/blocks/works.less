@@ -1,0 +1,25 @@
+// main: ../style.less
+.works {
+    margin: 2.8rem 0;
+
+    @media @mobile {
+        margin: 1.8rem 0;
+    }
+}
+
+.works__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.works__nav-link {
+    font-size: .94rem;
+    color: fade(@black, 70%);
+    text-decoration: none;
+    margin: 0 1.2rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
