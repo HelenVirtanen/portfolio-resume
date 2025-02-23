@@ -93,6 +93,23 @@ $(function() {
         event.stopPropagation();
     })
 
+    /* Close modal by pushing Esc */
+    $(document).on("keydown", function(event) {
+        if (event.keyCode === 27) {
+            let $modal = $(".modal.show");
+            if ($modal.length) {
+                $modal.find(".modal__dialog").css({
+                    transform: "scale(0)"
+                });
+    
+                setTimeout(function () {
+                    $modal.removeClass("show");
+                    $("body").removeClass("no-scroll");
+                }, 200);
+            }
+        }
+    });
+
 
     /* Slider: https://kenwheeler.github.io/slick/#go-get-it
      ======================================================== */
