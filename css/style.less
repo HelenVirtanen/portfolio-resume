@@ -2,58 +2,62 @@
 @import "vars";
 
 html {
-    font-size: 15px;
-    scroll-behavior: smooth;
+  font-size: 15px;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    width: 15px;}
-
-::-webkit-scrollbar-track {
-        background: fade(#03adba, 35%);
-        box-shadow: 0 0 2px rgba(68, 0, 89, 0.2) inset;}
-
-::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, #03adba, #570c91);
-        border-radius: 8px;
-        border: 3px solid fade(#03adba, 35%);
-        transition: background .2s linear;
-    }
-
-::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #570c91, #cca68d);}
-
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    color: @black;
-    
-
-
-    &.no-scroll {
-        overflow: hidden;
-    }
+  width: 15px;
 }
 
+::-webkit-scrollbar-track {
+  background: fade(#03adba, 35%);
+  box-shadow: 0 0 2px rgba(68, 0, 89, 0.2) inset;
+}
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #03adba, #570c91);
+  border-radius: 8px;
+  border: 3px solid fade(#03adba, 35%);
+  transition: background 0.2s linear;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #570c91, #cca68d);
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: @black;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 p {
-    margin: 0 0 1rem;
+  margin: 0 0 1rem;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 /* Vendor */
 @import "vendor/slick";
-
 
 /* Blocks */
 @import "blocks/container";
