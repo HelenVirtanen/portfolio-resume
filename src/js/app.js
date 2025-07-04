@@ -1,3 +1,5 @@
+import '../css/style.less';
+
 $(function() {
 
     const worksSlider = $('[data-slider="slick"]');
