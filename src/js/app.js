@@ -6,19 +6,19 @@ $(function() {
     
     /* Works filter 
     ==================== */
-    let filter = $("[data-filter]");
+    const filter = $("[data-filter]");
 
     filter.on("click", function(event)
     {
         event.preventDefault();
-        let cat = $(this).data('filter');
+        const cat = $(this).data('filter');
         
         if (cat == "all") {
             $("[data-cat]").removeClass('hide');
         } else {
             $("[data-cat]").each(function()
             {
-            let workCat = $(this).data('cat');
+            const workCat = $(this).data('cat');
             console.log(workCat)
 
             if (workCat != cat) {
@@ -42,8 +42,8 @@ $(function() {
     modalCall.on("click", function(event)
     {
         event.preventDefault();
-        let $this = $(this);
-        let modalId = $this.data('modal');
+        const $this = $(this);
+        const modalId = $this.data('modal');
         
         $(modalId).addClass('show');
         $("body").addClass('no-scroll');
@@ -64,8 +64,8 @@ $(function() {
     modalClose.on("click", function(event)
     {
         event.preventDefault();
-        let $this = $(this);
-        let modalParent = $this.parents('.modal'); 
+        const $this = $(this);
+        const modalParent = $this.parents('.modal'); 
         
         modalParent.find(".modal__dialog").css({
                 transform: "scale(0)"
@@ -79,8 +79,8 @@ $(function() {
 
     /* Close modal by clicking on the mask */
 
-    $(".modal").on("click", function(event) {
-        let $this = $(this);
+    $(".modal").on("click", function() {
+        const $this = $(this);
         $this.find(".modal__dialog").css({
             transform: "scale(0)"
         });
@@ -98,7 +98,7 @@ $(function() {
     /* Close modal by pushing Esc */
     $(document).on("keydown", function(event) {
         if (event.keyCode === 27) {
-            let $modal = $(".modal.show");
+            const $modal = $(".modal.show");
             if ($modal.length) {
                 $modal.find(".modal__dialog").css({
                     transform: "scale(0)"
@@ -128,7 +128,7 @@ $(function() {
     $(".slickPrev").on("click", function(event) {
         event.preventDefault();
 
-        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]')
+        const currentSlider = $(this).parents('.modal').find('[data-slider="slick"]')
 
         currentSlider.slick("slickPrev");
     });
@@ -136,7 +136,7 @@ $(function() {
     $(".slickNext").on("click", function(event) {
         event.preventDefault();
 
-        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]')
+        const currentSlider = $(this).parents('.modal').find('[data-slider="slick"]')
 
         currentSlider.slick("slickNext");
     });
