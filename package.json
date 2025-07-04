@@ -8,10 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "prettier --check './**/*.{html,css,js}'",
-    "format": "prettier --write './**/*.{html,css,js}'",
-    "lint": "eslint src --ext .js",
-    "lint:fix": "eslint src --ext .js --fix",
+    "check": "prettier --check './**/*.{html,css,js,ts}'",
+    "format": "prettier --write './**/*.{html,css,js,ts}'",
+    "lint": "eslint src --ext .js, .ts",
+    "lint:fix": "eslint src --ext .js, .ts --fix",
     "stylelint": "stylelint '**/*.{css,scss}'",
     "stylelint:fix": "stylelint '**/*.{css,scss}' --fix"
   },
@@ -29,6 +29,7 @@
   "devDependencies": {
     "eslint": "^9.30.1",
     "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
     "vite": "^7.0.2"
   },
   "dependencies": {
