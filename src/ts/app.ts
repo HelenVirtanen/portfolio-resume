@@ -1,7 +1,9 @@
 import '../css/style.less';
+import Glider from 'glider-js';
+import 'glider-js/glider.min.css';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const worksSlider = document.querySelectorAll<HTMLElement>('[data-slider="slick"]');
+    const worksSlider = document.querySelectorAll<HTMLElement>('[data-slider="glider"]');
     
     /* Works filter */
     const filters = document.querySelectorAll<HTMLElement>('[data-filter]');
@@ -48,8 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (dialog) dialog.style.transform = 'scale(1)';
         }, 200);
         
-        // @ts-ignore
-        $(modal).find('[data-slider="slick"]').slick('setPosition');
+
     });
 });
 
@@ -109,40 +110,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-
-    /* Slider: https://kenwheeler.github.io/slick/#go-get-it
-     ======================================================== */
-    // @ts-ignore
-    $(worksSlider).slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        arrows: false,
-        dots: true
-    });
-
-    document.querySelectorAll<HTMLElement>('.slickPrev').forEach(btn => {
-        btn.addEventListener('click', (event) => {
-            event.preventDefault();
-            const modal = btn.closest('.modal');
-            if (!modal) return;
-            const currentSlider = modal.querySelector('[data-slider="slick"]');
-            // @ts-ignore
-            if (currentSlider) $(currentSlider).slick("slickPrev");
-    });
-});
-
-    document.querySelectorAll<HTMLElement>('.slickNext').forEach(btn => {
-        btn.addEventListener('click', (event) => {
-            event.preventDefault();
-            const modal = btn.closest('.modal');
-            if (!modal) return;
-            const currentSlider = modal.querySelector('[data-slider="slick"]');
-            // @ts-ignore
-            if (currentSlider) $(currentSlider).slick("slickNext");
-    });
-});
     /* Mobile nav */
     const navToggle = document.getElementById('navToggle');
     const nav = document.getElementById('nav');
@@ -152,4 +119,19 @@ window.addEventListener('DOMContentLoaded', () => {
         nav?.classList.toggle('show');
         console.log("clicked");
     });
+
+    /* Slider with Glider */
+
+    worksSlider.forEach(slider => {
+    new Glider(slider, {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: {
+            prev: slider.closest('.modal')?.querySelector('.slickPrev') || undefined,
+            next: slider.closest('.modal')?.querySelector('.slickNext') || undefined,
+        },
+        draggable: true,
+        duration: 0.5
+    });
+});
 });

@@ -33,6 +33,7 @@
     "vite": "^7.0.2"
   },
   "dependencies": {
+    "glider-js": "^1.7.9",
     "stylelint": "^16.21.1"
   }
 }
