@@ -18,8 +18,18 @@
     color: fade(@black, 70%);
     text-decoration: none;
     margin: 0 1.2rem;
+    transition: color .2s linear, text-shadow .2s linear;
 
-    &:hover {
+    &:hover,
+    &.is-active {
         text-decoration: underline;
+        color: #0fbbe1;
+        text-shadow: 0 0 20px 7px rgba(3, 173, 186, 0.6);
+    }
+
+    &:active {
+        text-decoration: underline;
+        color: #630fe1;
+        text-shadow: 0 0 20px 7px rgba(85, 3, 186, 0.6);
     }
 }

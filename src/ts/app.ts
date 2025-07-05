@@ -48,6 +48,8 @@ window.addEventListener("DOMContentLoaded", () => {
   filters.forEach((filter) => {
     filter.addEventListener("click", (event) => {
       event.preventDefault();
+      filters.forEach((f) => f.classList.remove("is-active"));
+      filter.classList.add("is-active");
       const cat = filter.dataset.filter;
 
       const workItems = document.querySelectorAll<HTMLElement>("[data-cat]");
