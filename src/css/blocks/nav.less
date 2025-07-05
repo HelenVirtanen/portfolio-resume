@@ -39,7 +39,7 @@
         content: "";
         width: 0;
         height: 2px;
-        background-color: #cca68d;
+        background: linear-gradient(to right, #0787a3, #79ddf1);
         position: absolute;
         bottom: -5px;
         left: 0;
@@ -47,20 +47,20 @@
         transition: width .2s linear;
     }
 
-    &:hover:not(.nav__link--btn) {       
+    &:hover:not(.nav__link--btn) {
         &:after {
             width: 100%;
         }
     }
 
     &--btn {
-        padding: 0.66rem 2.3rem;
+        padding: 0.66rem 2rem;
         border: 3px solid #cca68d;
-        border-radius: 20px;
+        border-radius: 25px;
         transition: background-color .2s linear, color .2s linear, border .2s linear, transform .2s ease;
 
         &:hover {
-            background-color: #0787a3;
+            background: linear-gradient(to bottom, #0787a3, #45b1c7);
             border-color: #45b1c7;
             color: #fff;
             transform: scale(1.05);
