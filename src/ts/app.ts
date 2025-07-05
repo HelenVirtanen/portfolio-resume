@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!loadMore) {
     throw new Error("Load More button not found");
   }
-  let visibleCount = 6; // показываем первые 6 работ
+  let visibleCount = 6;
 
   // Hide all works after first six
   works.forEach((work, index) => {
@@ -53,6 +53,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const workItems = document.querySelectorAll<HTMLElement>("[data-cat]");
 
       workItems.forEach((item) => {
+        item.style.display = "block";
         const workCat = item.dataset.cat;
         if (!cat || cat === "all" || workCat === cat) {
           item.classList.remove("hide");
